@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="head_bar">
+  <h1 class="head_bar__title">Bookshelf</h1>
+</header>
+<main class="main_container">
+  <section class="book_shelf">
+    <h2>Daftar Buku</h2>
+    <div>
+      <label for="filterCategory">Filter berdasarkan Kategori:</label>
+      <select id="filterCategory">
+        <option value="all">Semua</option>
+      </select>
+    </div>
+    <div>
+      <label for="filterYear">Filter berdasarkan Tahun:</label>
+      <select id="filterYear">
+        <option value="all">Semua</option>
+      </select>
+    </div>
+    <div>
+      <form id="searchBookForm">
+        <label for="searchBookTitle">Judul</label>
+        <input id="searchBookTitle" type="text" placeholder="Cari berdasarkan judul">
+        <label for="searchBookAuthor">Penulis</label>
+        <input id="searchBookAuthor" type="text" placeholder="Cari berdasarkan penulis">
+        <label for="searchBookPublisher">Penerbit</label>
+        <input id="searchBookPublisher" type="text" placeholder="Cari berdasarkan penerbit">
+        <button id="searchSubmit" type="submit">Cari</button>
+      </form>
+    </div>
+    <div id="bookshelfList" class="book_list"></div>
+  </section>
+
+  <div class="side_section">
+    <section class="input_section">
+      <h2>Tambah Buku</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Judul</label>
+          <input id="inputBookTitle" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis</label>
+          <input id="inputBookAuthor" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun</label>
+          <input id="inputBookYear" type="number" required>
+        </div>
+        <div class="input">
+          <label for="inputBookPublisher">Penerbit</label>
+          <input id="inputBookPublisher" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookPages">Jumlah Halaman</label>
+          <input id="inputBookPages" type="number" required>
+        </div>
+        <div class="input">
+          <label for="inputBookCategory">Kategori</label>
+          <select id="inputBookCategory" required></select>
+        </div>
+        <button id="bookSubmit" type="submit">Tambah Buku</button>
+      </form>
+    </section>
+
+    <section class="category_section">
+      <h2>Tambah Kategori</h2>
+      <form id="inputCategory">
+        <div class="input">
+          <label for="inputCategoryName">Nama Kategori</label>
+          <input id="inputCategoryName" type="text" required>
+        </div>
+        <button id="categorySubmit" type="submit">Tambah Kategori</button>
+      </form>
+      <div id="categoryList"></div>
+    </section>
+
+    <section class="update_section">
+      <h2>Edit Buku</h2>
+      <form id="updateBook">
+        <div class="input">
+          <label for="updateBookTitle">Judul</label>
+          <input id="updateBookTitle" type="text" required>
+        </div>
+        <div class="input">
+          <label for="updateBookAuthor">Penulis</label>
+          <input id="updateBookAuthor" type="text" required>
+        </div>
+        <div class="input">
+          <label for="updateBookYear">Tahun</label>
+          <input id="updateBookYear" type="number" required>
+        </div>
+        <div class="input">
+          <label for="updateBookPublisher">Penerbit</label>
+          <input id="updateBookPublisher" type="text" required>
+        </div>
+        <div class="input">
+          <label for="updateBookPages">Jumlah Halaman</label>
+          <input id="updateBookPages" type="number" required>
+        </div>
+        <div class="input">
+          <label for="updateBookCategory">Kategori</label>
+          <select id="updateBookCategory" required></select>
+        </div>
+        <button id="updateBookSubmit" type="submit">Simpan</button>
+      </form>
+    </section>
+
+    <section class="update_section">
+      <h2>Edit Kategori</h2>
+      <form id="updateCategory">
+        <div class="input">
+          <label for="updateCategoryOld">Kategori Lama</label>
+          <select id="updateCategoryOld" required></select>
+        </div>
+        <div class="input">
+          <label for="updateCategoryNew">Kategori Baru</label>
+          <input id="updateCategoryNew" type="text" required>
+        </div>
+        <button id="updateCategorySubmit" type="submit">Simpan</button>
+      </form>
+    </section>
+  </div>
+</main>
+
+<script src="js/script.js" type="text/javascript"></script>
+
+</body>
+</html>
